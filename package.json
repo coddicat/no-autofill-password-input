@@ -1,7 +1,7 @@
 {
   "name": "no-autofill-password-input",
   "description": "No autofill password input",
-  "version": "0.1.2",
+  "version": "1.0.0",
   "author": {
     "name": "Rodion Shlomo Solomonyk",
     "email": "contacts@coddicat.com"
