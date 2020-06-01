@@ -1,24 +1,42 @@
 # no-autofill-password-input
 
-## Project setup
+## Installation
 ```
-npm install
+npm install no-autofill-password-input
+
 ```
 
-### Compiles and hot-reloads for development
+## Vue install
 ```
-npm run serve
+import 'no-autofill-password-input/dist/noAutofillPasswordInput.css';
+Vue.component('no-autofill-password-input', noAutofillPasswordInput);
+
 ```
 
-### Compiles and minifies for production
+## Usage
 ```
-npm run build
+<no-autofill-password-input v-model="password" :show-password="showPassword">
+</no-autofill-password-input>
+
 ```
 
-### Lints and fixes files
+## Slot
 ```
-npm run lint
+<no-autofill-password-input :value="password" :show-password="showPassword">
+  <label>
+    <input type="checkbox" v-model="showPassword" />
+    <span>Show password</span>
+  </label>
+  <input type="text" v-model="password" style="margin-left:5px; font-size: 20px" />
+</no-autofill-password-input>
+
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## props
+- inputClass
+- maskClass
+- showPassword
+
+
+## Important
+If input style changed after mounting needed rerender the component

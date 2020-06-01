@@ -1,5 +1,5 @@
 <template>
-  <div class="password-input" :class="{'password-input--showPassword':showPassword}">
+  <div class="no-autofill-password-input" :class="{'no-autofill-password-input--showPassword':showPassword}">
     <slot>
       <input
         :class="inputClass"
@@ -12,7 +12,7 @@
     <span
       v-show="!showPassword"
       ref="inputMask"
-      class="password-input__mask"
+      class="no-autofill-password-input__mask"
       :class="maskClass"
     >{{ maskedPassword }}</span>
   </div>
@@ -128,7 +128,7 @@ export default {
 </script>
 
 <style lang="scss">
-.password-input {
+.no-autofill-password-input {
   display: inline-block;
   position: relative;
 
